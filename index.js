@@ -62,10 +62,11 @@ console.log(specificReview(reviews, "Julius"))
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 function addReview(array, name, rating, feedback){
-
+  array.push({name, rating, feedback});
+  return array;
 }
 
-console.log(reviews)
+console.log(addReview(reviews, "Chris", 4, "I mean, doesn't get much better"))
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
