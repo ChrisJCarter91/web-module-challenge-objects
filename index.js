@@ -1,7 +1,13 @@
 ///////////////Menu Items (MVP)///////////////////
 
 const latte = {name: "Cafe Latte", price: 4, category: "Drinks"};
-const burger = {name: "Burger", price: 18, category: "Lunch"};
+const burger = {name: "Burger", price: 18, category: "Lunch", discount: function(type){
+  if( type === "Student" || type === "Teacher"){
+    return this.price - (this.price * .25)
+  } else {
+    return this.price - (this.price * .1)
+  }
+}};
 const breakfastBurrito = {name: "Breakfast Burrito", price: 16, category:"Breakfast"};
 
 /* Task 1a: write a function to return more menu items with the same format as the items above. */
@@ -29,7 +35,7 @@ and should return a number.
 
 For example, burger.discount("teacher") would return 13.5 and burger.discount("public") would return 16.2*/
 
-
+console.log(burger.discount("Student"));
 
 ///////////////Reviews (MVP)///////////////////
 
