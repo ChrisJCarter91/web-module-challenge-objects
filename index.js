@@ -50,16 +50,28 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 ]
 
 /* Task 3: Console.log just Julius' feedback */
+function specificReview(array, name) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].name === name) {
+      return array[i].feedback
+    }
+  }
+};
 
+console.log(specificReview(reviews, "Julius"))
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+function addReview(array, name, rating, feedback){
 
+}
+
+console.log(reviews)
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
 
 /*  Task 6: Write a function to return a review based on the index of the review in the array.
 
- Your function should take two arguments:
+Your function should take two arguments:
 
 (1) an array which holds all of the reviews
 (2) a number which is the desired index in the array.
